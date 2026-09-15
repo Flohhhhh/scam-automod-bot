@@ -7,7 +7,7 @@ import { EnvService } from "./env/env.service";
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter());
   const env = app.get(EnvService);
-  await app.listen(env.get("PORT"));
+  await app.listen(env.get("PORT"), "0.0.0.0");
 }
 
 void bootstrap().catch((error: unknown) => {

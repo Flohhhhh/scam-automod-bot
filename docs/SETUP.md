@@ -7,3 +7,5 @@ Copy `.env.example` to `.env`. `DISCORD_BOT_TOKEN` authenticates the bot, while 
 Set `DISCORD_DEVELOPMENT_GUILD_ID` to one or more comma-separated guild IDs during development so Necord registers future commands immediately in those guilds. Do not set it for the deployed production bot.
 
 Use `npm run dev` for watch mode. Production runs `npm run build` followed by `npm start`. Railway can use the same commands and optionally supplies the documented Railway metadata variables.
+
+The HTTP server binds to `0.0.0.0` in both environments, so `http://localhost:3000/health` works locally and Railway can reach `/health` through its injected `PORT`.
