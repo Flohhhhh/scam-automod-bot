@@ -15,6 +15,8 @@ A dedicated Discord moderation bot built with NestJS, Necord, Discord.js, and Ty
 
 ### Railway
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/ai-cM2?referralCode=cCeYAQ&utm_medium=integration&utm_source=template&utm_campaign=generic)
+
 Make sure to set these intents on the Discord developer bot page otherwise build will fail!
 <img width="2886" height="716" alt="image" src="https://github.com/user-attachments/assets/14c2dd28-703c-4634-9810-0a0b1c3dbdb4" />
 
