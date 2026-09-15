@@ -1,0 +1,75 @@
+{
+  "name": "scam-automod-bot",
+  "version": "1.0.0",
+  "description": "Dedicated Discord bot for automatic cross-channel image spam moderation.",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "nest build",
+    "start": "node dist/src/main",
+    "dev": "nest start --watch",
+    "test": "jest --runInBand",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint --max-warnings 0 .",
+    "typecheck": "tsc --noEmit",
+    "validate:handlers": "tsx scripts/validate-handlers.ts",
+    "create:command": "tsx scripts/create-command.ts",
+    "create:listener": "tsx scripts/create-listener.ts",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm test && npm run validate:handlers && npm run build"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.9",
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/core": "^11.1.9",
+    "@nestjs/platform-fastify": "^11.1.9",
+    "@nestjs/schedule": "^6.1.0",
+    "discord.js": "^14.25.1",
+    "necord": "^6.11.2",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.14",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.10.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.5.0",
+    "jest": "^30.2.0",
+    "prettier": "^3.7.3",
+    "ts-jest": "^29.4.5",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.ts$": [
+        "ts-jest",
+        {
+          "tsconfig": "<rootDir>/../tsconfig.json"
+        }
+      ]
+    },
+    "testEnvironment": "node"
+  },
+  "volta": {
+    "node": "22.20.0"
+  },
+  "engines": {
+    "node": ">=22.20.0"
+  },
+  "overrides": {
+    "fastify": "^5.12.4"
+  }
+}
