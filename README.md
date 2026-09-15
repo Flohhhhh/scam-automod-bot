@@ -13,6 +13,14 @@ A dedicated Discord moderation bot built with NestJS, Necord, Discord.js, and Ty
 
 ## Setup
 
+### Railway
+
+Make sure to set these intents on the Discord developer bot page otherwise build will fail!
+<img width="2886" height="716" alt="image" src="https://github.com/user-attachments/assets/14c2dd28-703c-4634-9810-0a0b1c3dbdb4" />
+
+
+### Custom
+
 1. Use Node.js 22.20.0 and run `npm install`.
 2. Copy `.env.example` to `.env` and provide `DISCORD_BOT_TOKEN` and `DISCORD_MOD_LOG_CHANNEL_ID`.
 3. Enable the Server Members and Message Content privileged intents in the Discord Developer Portal.
